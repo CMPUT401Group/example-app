@@ -1,124 +1,133 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <PropertyGroup>
-        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-        <SchemaVersion>2.0</SchemaVersion>
-        <ProjectGuid>{35eb7565-7a67-4885-bb5a-b566dfb15320}</ProjectGuid>
-        <ProjectHome />
-        <ProjectView>ShowAllFiles</ProjectView>
-        <StartupFile>Gruntfile.js</StartupFile>
-        <WorkingDirectory>.</WorkingDirectory>
-        <OutputPath>.</OutputPath>
-        <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
-        <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
-        <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
-    <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
-    <ItemGroup>
-        <Content Include="package.json" />
-        <Content Include="README.md" />
-        <Compile Include="Gruntfile.js" />
-        <Content Include="dist\plugin.json" />
-        <Content Include="dist\README.md" />
-        <Compile Include="dist\module.js" />
-        <Content Include="src\plugin.json" />
-        <Compile Include="src\module.js" />
-        <Content Include="dist\components\config.html" />
-        <Content Include="dist\components\logs.html" />
-        <Content Include="dist\components\stream.html" />
-        <Content Include="dist\components\clippy.css" />
-        <Compile Include="dist\components\clippy.js" />
-        <Compile Include="dist\components\config.js" />
-        <Compile Include="dist\components\logs.js" />
-        <Compile Include="dist\components\stream.js" />
-        <Content Include="dist\css\dark.css" />
-        <Content Include="dist\css\example-app.css" />
-        <Content Include="dist\css\light.css" />
-        <Content Include="dist\dashboards\example_app_dashboard.json" />
-        <Content Include="dist\datasource\plugin.json" />
-        <Compile Include="dist\datasource\datasource.js" />
-        <Compile Include="dist\datasource\module.js" />
-        <Content Include="dist\img\large_logo.png" />
-        <Content Include="dist\img\small_logo.png" />
-        <Content Include="dist\panel\plugin.json" />
-        <Compile Include="dist\panel\module.js" />
-        <Content Include="src\components\config.html" />
-        <Content Include="src\components\logs.html" />
-        <Content Include="src\components\stream.html" />
-        <Content Include="src\components\clippy.css" />
-        <Compile Include="src\components\clippy.js" />
-        <Compile Include="src\components\config.js" />
-        <Compile Include="src\components\logs.js" />
-        <Compile Include="src\components\stream.js" />
-        <Content Include="src\css\dark.css" />
-        <Content Include="src\css\example-app.css" />
-        <Content Include="src\css\light.css" />
-        <Content Include="src\dashboards\example_app_dashboard.json" />
-        <Content Include="src\datasource\plugin.json" />
-        <Compile Include="src\datasource\datasource.js" />
-        <Compile Include="src\datasource\module.js" />
-        <Content Include="src\img\large_logo.png" />
-        <Content Include="src\img\small_logo.png" />
-        <Content Include="src\panel\plugin.json" />
-        <Compile Include="src\panel\module.js" />
-    </ItemGroup>
-    <ItemGroup>
-        <Folder Include="dist" />
-        <Folder Include="dist\components" />
-        <Folder Include="dist\css" />
-        <Folder Include="dist\dashboards" />
-        <Folder Include="dist\datasource" />
-        <Folder Include="dist\img" />
-        <Folder Include="dist\panel" />
-        <Folder Include="src" />
-        <Folder Include="src\components" />
-        <Folder Include="src\css" />
-        <Folder Include="src\dashboards" />
-        <Folder Include="src\datasource" />
-        <Folder Include="src\img" />
-        <Folder Include="src\panel" />
-    </ItemGroup>
-    <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-    <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
-    <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
-    <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
-    <ProjectExtensions>
-        <VisualStudio>
-          <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
-            <WebProjectProperties>
-              <UseIIS>False</UseIIS>
-              <AutoAssignPort>True</AutoAssignPort>
-              <DevelopmentServerPort>0</DevelopmentServerPort>
-              <DevelopmentServerVPath>/</DevelopmentServerVPath>
-              <IISUrl>http://localhost:48022/</IISUrl>
-              <NTLMAuthentication>False</NTLMAuthentication>
-              <UseCustomServer>True</UseCustomServer>
-              <CustomServerUrl>http://localhost:1337</CustomServerUrl>
-              <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
-            </WebProjectProperties>
-          </FlavorProperties>
-          <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
-            <WebProjectProperties>
-              <StartPageUrl>
-              </StartPageUrl>
-              <StartAction>CurrentPage</StartAction>
-              <AspNetDebugging>True</AspNetDebugging>
-              <SilverlightDebugging>False</SilverlightDebugging>
-              <NativeDebugging>False</NativeDebugging>
-              <SQLDebugging>False</SQLDebugging>
-              <ExternalProgram>
-              </ExternalProgram>
-              <StartExternalURL>
-              </StartExternalURL>
-              <StartCmdLineArguments>
-              </StartCmdLineArguments>
-              <StartWorkingDirectory>
-              </StartWorkingDirectory>
-              <EnableENC>False</EnableENC>
-              <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
-            </WebProjectProperties>
-          </FlavorProperties>
-        </VisualStudio>
-    </ProjectExtensions>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{35eb7565-7a67-4885-bb5a-b566dfb15320}</ProjectGuid>
+    <ProjectHome />
+    <ProjectView>ShowAllFiles</ProjectView>
+    <StartupFile>Gruntfile.js</StartupFile>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Compile Include="Gruntfile.js" />
+    <Content Include="dist\plugin.json" />
+    <Content Include="dist\README.md" />
+    <Compile Include="dist\module.js" />
+    <Content Include="src\plugin.json" />
+    <Compile Include="src\module.js" />
+    <Content Include="dist\components\config.html" />
+    <Content Include="dist\components\logs.html" />
+    <Content Include="dist\components\stream.html" />
+    <Content Include="dist\components\clippy.css" />
+    <Compile Include="dist\components\clippy.js" />
+    <Compile Include="dist\components\config.js" />
+    <Compile Include="dist\components\logs.js" />
+    <Compile Include="dist\components\stream.js" />
+    <Content Include="dist\css\dark.css" />
+    <Content Include="dist\css\example-app.css" />
+    <Content Include="dist\css\light.css" />
+    <Content Include="dist\dashboards\example_app_dashboard.json" />
+    <Content Include="dist\datasource\plugin.json" />
+    <Compile Include="dist\datasource\datasource.js" />
+    <Compile Include="dist\datasource\module.js" />
+    <Content Include="dist\img\large_logo.png" />
+    <Content Include="dist\img\small_logo.png" />
+    <Content Include="dist\panel\plugin.json" />
+    <Compile Include="dist\panel\module.js" />
+    <Content Include="src\components\config.html" />
+    <Content Include="src\components\logs.html" />
+    <Content Include="src\components\stream.html" />
+    <Content Include="src\components\clippy.css" />
+    <Compile Include="src\components\clippy.js" />
+    <Compile Include="src\components\config.js" />
+    <Compile Include="src\components\logs.js" />
+    <Compile Include="src\components\stream.js" />
+    <Content Include="src\css\dark.css" />
+    <Content Include="src\css\example-app.css" />
+    <Content Include="src\css\light.css" />
+    <Content Include="src\dashboards\example_app_dashboard.json" />
+    <Content Include="src\datasource\plugin.json" />
+    <Compile Include="src\datasource\datasource.js" />
+    <Compile Include="src\datasource\module.js" />
+    <Content Include="src\img\large_logo.png" />
+    <Content Include="src\img\small_logo.png" />
+    <Content Include="src\panel\plugin.json" />
+    <Compile Include="src\panel\module.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dist" />
+    <Folder Include="dist\components" />
+    <Folder Include="dist\css" />
+    <Folder Include="dist\dashboards" />
+    <Folder Include="dist\datasource" />
+    <Folder Include="dist\img" />
+    <Folder Include="dist\panel" />
+    <Folder Include="src" />
+    <Folder Include="src\components" />
+    <Folder Include="src\css" />
+    <Folder Include="src\dashboards" />
+    <Folder Include="src\datasource" />
+    <Folder Include="src\img" />
+    <Folder Include="src\panel" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\globals\" />
+    <Folder Include="typings\globals\lodash\" />
+    <Folder Include="typings\globals\node\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="typings\globals\lodash\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
+    <TypeScriptCompile Include="typings\index.d.ts" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

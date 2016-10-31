@@ -1,0 +1,330 @@
+﻿{
+  "id": 3,
+  "revision": "1.0",
+  "title": "Joey's test",
+  "tags": [
+    "graphite",
+    "carbon"
+  ],
+  "style": "dark",
+  "timezone": "browser",
+  "editable": true,
+  "hideControls": false,
+  "sharedCrosshair": false,
+  "rows": [
+    {
+      "collapsable": true,
+      "collapse": false,
+      "editable": true,
+      "height": "350px",
+      "notice": false,
+      "panels": [
+        {
+          "aliasColors": {},
+          "annotate": {
+            "enable": false
+          },
+          "bars": false,
+          "datasource": "RunWithIT",
+          "editable": true,
+          "fill": 0,
+          "grid": {
+            "max": null,
+            "min": 0
+          },
+          "id": 1,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "loadingEditor": false,
+          "nullPointMode": "null as zero",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "resolution": 100,
+          "scale": 1,
+          "seriesOverrides": [
+            {
+              "alias": "Points Per Update",
+              "yaxis": 2
+            },
+            {
+              "alias": "CPU",
+              "yaxis": 2
+            }
+          ],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "refId": "A",
+              "target": "alias(sumSeries(carbon.agents.*.updateOperations),\"Updates\") "
+            },
+            {
+              "refId": "B",
+              "target": "alias(sumSeries(carbon.agents.*.metricsReceived),'Metrics Received')"
+            },
+            {
+              "refId": "C",
+              "target": "alias(sumSeries(carbon.agents.*.committedPoints),'Committed Points')"
+            },
+            {
+              "refId": "D",
+              "target": "alias(sumSeries(carbon.agents.*.pointsPerUpdate),'Points Per Update')"
+            },
+            {
+              "refId": "E",
+              "target": "alias(averageSeries(carbon.agents.*.cpuUsage),'CPU')"
+            },
+            {
+              "refId": "F",
+              "target": "alias(sumSeries(carbon.agents.*.creates),'Creates')"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Graphite Carbon Metrics",
+          "tooltip": {
+            "msResolution": false,
+            "query_as_alias": true,
+            "shared": false,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "zerofill": true
+        }
+      ],
+      "title": "Row1"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "RunWithIT",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "id": 2,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "refId": "A",
+              "target": "IN.stb-sim.dean.AdsAvailable.*.*.*.*"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Panel Title",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "id": 3,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "refId": "A",
+              "target": "cassandra.cassandra1.jvm.memory.heap_usage"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Analytic Graph",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "analytic-graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "title": "New row"
+    }
+  ],
+  "time": {
+    "from": "2016-09-01T11:49:00.067Z",
+    "to": "2016-09-02T17:39:29.301Z"
+  },
+  "timepicker": {
+    "collapse": false,
+    "enable": true,
+    "notice": false,
+    "now": true,
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "status": "Stable",
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ],
+    "type": "timepicker"
+  },
+  "templating": {
+    "enable": false,
+    "list": []
+  },
+  "annotations": {
+    "enable": false,
+    "list": []
+  },
+  "refresh": false,
+  "schemaVersion": 13,
+  "version": 4,
+  "links": [],
+  "gnetId": null
+}
